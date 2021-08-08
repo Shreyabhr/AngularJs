@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="panel panel-primary" style="width: 80%;">
+        <div class="panel-heading">Product List</div>
+        <div class="container">
+            <label>Filter By:</label>
+            <input type="text" id = 'filter' ng-model = 'searchText.productName'>
+        </div>
+        <div class="container">       
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th><button id = 'showImage' class="btn btn-primary" ng-click="toggle()">Show Image</button></th>
+                  <th>Product</th>
+                  <th>Code</th>
+                  <th>Available</th>
+                  <th>Price</th>
+                  <th>Ratings</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat = 'product in products | filter : searchText'>
+                  <td><img ng-src="{{product.imageUrl}}" id = "productImage" ng-if="isDisplay"></td>
+                  <td><a href = '' ng-click = 'display(product)'>{{product.productName}}</a></td>
+                  <td>{{product.productCode}}</td>
+                  <td>{{product.releaseDate}}</td>
+                  <td>{{product.price | currencyFilter}}</td>
+                  <td ng-bind-html = "product.starRating | stars"></td>
+                      
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        
+    </div>
+</body>
+</html>

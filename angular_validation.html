@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= 'stylesheet' href="style.css">
+    <title>Document</title>
+</head>
+<body ng-app = ''>
+    <form name="myForm">
+        <p>If touched color changes to aqua, if untouched color remains azure</p>
+        <label>First Name</label>
+        <input  ng-model="firstName" required id = 'firstName'><br><br>
+        <p>If ng-prestine color is red, if ng-dirty color changes to green</p>
+        <label>Last Name</label>
+        <input  ng-model="lastName" required id = 'lastName'><br><br>
+        <p>If age is valid color is light-green, if invalid age color is pink</p>
+        <label>Age</label>
+        <input ng-model="age" required id = 'age' ng-pattern="/^\d+$/"><br><br>
+        <p>If field is empty color is grey, if not- empty color changes to green</p>
+        <label>Email</label>
+        <input ng-model="email" required id = 'email'><br><br>
+        
+    </form>
+    <script src = "angular.js"></script>
+    <script src = "angular-route.js"></script>
+</body>
+</html>

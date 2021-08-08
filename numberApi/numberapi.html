@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app = "main">
+    <section ng-controller = 'numberapicontroller'>
+        <p>Enter a number</p>
+        <input type = 'number' ng-model = 'number'>
+        <button ng-click = 'getResponse()'>Get facts</button>
+        <p>Result: {{result}}</p>
+    </section>
+    <script src = "angular.js"></script>
+    <script src = 'angular-route.js'></script>
+    <script src = "numberapi.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="panel panel-primary" style="width: 80%;">
+        <div class="panel-heading" >Product Details : {{name}}</div>
+        <div style="text-align: left;">
+            <p>Name: {{name}}</p>
+            <p>Code: {{code}}</p>
+            <p>Description: {{description}}</p>
+            <p>Availability: {{avail}}</p>
+            <p>Price: {{price}}</p>
+            <p>Five Start Rating:</p>
+            <p ng-bind-html = "rating | stars"></p>
+            <div id = 'singleImage'>
+                <img src = '{{image}}' id = 'divImage'>
+            </div>
+        </div>
+        <div>
+            <button class="btn"><i class="glyphicon glyphicon-menu-left" ng-click="goBack()"></i>Back</button>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <shreya-header></shreya-header>
+    <table class="table-bordered" style="display: none;" id = 'table'>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Email</td>
+            <td>Roll No</td>
+            <td>Gender</td>
+            <td>Date</td>
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+        <tr ng-repeat = "data in studentData">
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.rollNo}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.age}}</td>
+            <td>{{data.isMale | genderFilter}}</td>
+            <td>{{data.date}}</td>
+            <td><button class="btn btn-warning" ng-click = 'edit(data.id,data)'>Edit</button></td>
+            <td><button class="btn btn-danger" ng-click = 'delete(data.id)'>Delete</button></td>
+        </tr>
+      </table>
+</body>
+</html>
